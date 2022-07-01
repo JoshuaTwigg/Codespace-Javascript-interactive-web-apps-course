@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name ="viewport" content = "width=device-width,initial-scale = 1.0">
+<link rel="stylesheet" type ="text/css" href ="Css/stylesheetform.css">
+</head>
+
+
+<body>
+
+    <ul id="htmllist">list
+        <li>dg</li>
+    </ul>
+
+<form required action="" method="">
+    <div class="all">
+        <h1>Form</h1>
+        <div class="formal">
+        <label for="task">New Task:</label>
+        <input type="text" name="task" id="task" placeholder="required,no html allowed" required >
+        <p id="error" style="display:none;">make sure your task has no html characters</p>
+        </div>
+
+
+        <div class="formal" id="alignment">
+        <label id="alignment" for="description">Description:</label>
+        <textarea name="description" id="alignment" placeholder="Describe the task *OPTIONAL"></textarea>
+        </div>
+
+        <div class="formal">
+        <label for="date"></label>
+        <input type="date" name="date" id="date" required>
+        </div>
+
+        <div class="formal">
+        <label for="time"></label>
+        <input type="time" name="time" id="time" required>
+        </div>
+
+        <div class="button" >
+        <input type="submit"value="SUBMIT" onclick="validate()" >
+
+
+        
+        <script>
+            function validate(){
+            let x = document.getElementById("task").value;
+                if(x =='>'){
+                document.getElementById("error").style.display ="block";
+                event.preventDefault()
+                }
+                else if(x =='<'){
+                document.getElementById("error").style.display ="block";
+                event.preventDefault()
+               
+                }
+               
+                let jslist = document.createElement("li");
+                let htmlist = document.getElementById("htmllist")
+                let z = document.getElementById("task").value
+                let node = document.createTextNode(z);
+                jslist.appendChild(node);
+                htmlist.appendChild(jslist)
+                           
+            }
+          
+        </script>
+        </div>
+    </div>
+</form>
+
+
+
+</body>
+
+</html>

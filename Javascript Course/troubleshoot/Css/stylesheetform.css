@@ -1,0 +1,39 @@
+
+
+
+
+form{
+
+    text-align: center;
+    background-color: aquamarine;
+    width:100%vw;
+    height:50%;
+    display:block;
+    
+}
+
+::placeholder{
+
+    color: crimson;
+}
+
+.formal{
+    
+    padding:20px;
+    display: inline-block
+}
+
+#alignment{
+    height:50px;
+    vertical-align: middle;
+}
+
+.button{
+
+    background-color: burlywood;
+}
+
+#error{
+    color: crimson;
+    display:none;
+}

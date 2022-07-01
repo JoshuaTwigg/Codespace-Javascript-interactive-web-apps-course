@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name ="viewport" content = "width=device-width,initial-scale = 1.0">
+<link rel="stylesheet" type ="text/css" href ="">
+<script src="js/user reg.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+
+
+<button type="submit" id="poo" onclick="alert('fucking faggot')" ></button>
+
+
+<script>
+
+let x = document.getElementById("poo")
+
+x.addEventListener("click",function(e){
+    console.log(e)
+})
+
+</script>
+
+
+<h2>The Website</h2>
+
+    <div style="display: flex;">
+        
+        <p id="p1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Consequatur natus ad ipsa sit recusandae esse adipisci tempora maxime a officia, 
+            illum unde quo sunt cum quasi. Sapiente quas perferendis dolor?
+        </p>
+
+        <p id="p2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Consequatur natus ad ipsa sit recusandae esse adipisci tempora maxime a officia, 
+            illum unde quo sunt cum quasi. Sapiente quas perferendis dolor?
+        </p>
+
+    </div>
+
+    <h3 style="text-align: center;"> Ready to sign up? </h3>
+
+    <form action="" style="text-align: center;">
+        <input type="text" placeholder="Enter your email">
+        <input type="password" placeholder="Enter your password">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Start of javascript -->
+    <script>
+
+        document.addEventListener('click' , (e) => {
+
+            // prevent default so we cant test target property
+            e.preventDefault()
+
+            console.log(e.target)
+        })
+
+    </script>
+In this example, you can see we are adding an event listener to the document object itself and with the .target property we can return any DOM element we want even though they do not contain event listeners themselves.
+
+ 
+
+Traversing the DOM with properties and chaining:
+
+Since Event objects are plain old JavaScript objects we can use specific properties in conjunction with a DOM element to traverse the DOM and move the target to different elements as we traverse through the DOM.
+
+Examples of this include getting the target element’s parent element, getting sibling elements or deleting a specific child element inside the target.
+
+For example:
+
+		<!-- x elem -->
+    <div id='x'>
+        Hello world
+    </div>
+
+    <!-- y elem -->
+    <div id='y'>
+        Lorem ipsum
+    </div>
+
+    <!-- z elem -->
+    <div id='z'>
+        <button>
+            Click Here
+        </button>
+    </div>
+
+    <!-- Start of javascript -->
+    <script>
+
+        let y = document.getElementById('y');
+
+        y.onclick = (e) => {
+
+            console.log(e)
+
+            // should give us a div with id of y
+            console.log(e.target)
+
+            // should log the sibling element directly
+            // after the one we clicked on
+            console.log("previous elements id == " + e.target.nextElementSibling.id)
+
+            // should log the sibling element directly
+            // after the one we clicked on
+            console.log("previous elements innerHTML == " + e.target.previousElementSibling.innerHTML)				
+
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name ="viewport" content = "width=device-width,initial-scale = 1.0">
+<link rel="stylesheet" type ="text/css" href ="">
+</head>
+
+
+<body>
+
+    <h1 id="input"></h1>
+    <input type="number" name="box" id="box" placeholder="number here: ">
+    <button onclick= conversion()  type="button" name="button" id="button">submit button not req</button>
+    
+
+
+<script>
+    //function checkIfNumber(){
+        //if(x==int);
+
+    //}
+        
+    function conversion(){
+        let x =document.getElementById("box").value;  
+        document.getElementById("input").innerHTML = x
+        x = parseInt(x,)
+        console.log(x)
+        console.log(typeof x)
+
+        if(typeof x === "number"){
+            console.log("correct")
+        }else if(typeof x !== "number"){
+            console.log("please insert a number!")
+            document.getElementById("input").innerHTML = "please insert a number you fool!"
+        }if(x % 2 == 0){
+            console.log("EVEN!")
+        }else{
+            console.log("ODD!")
+        }
+            
+    }
+        
+        
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
